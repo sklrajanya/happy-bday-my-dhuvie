@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Dhuvie 🎂</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', cursive;
+}
+
+body {
+    background: linear-gradient(180deg, #fff0f6, #ffe4ec);
+    overflow-x: hidden;
+}
+
+/* CENTER EVERYTHING */
+.screen {
+    min-height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+/* CAKE */
+#cake {
+    font-size: 120px;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* BUTTONS */
+.btn {
+    margin: 15px;
+    padding: 12px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: #ff9ecf;
+    color: white;
+}
+
+.btn:hover {
+    background: #ff6fae;
+}
+
+/* IMAGE */
+.photo-box img {
+    width: 260px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+/* MESSAGE */
+.message {
+    max-width: 900px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #4a2c38;
+    white-space: pre-line;
+}
+
+/* FOREVER SCREEN */
+#forever-screen {
+    background: linear-gradient(180deg, #ffd6e8, #fff);
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#forever-screen h1 {
+    font-size: 60px;
+    color: #ff2f92;
+    margin-bottom: 20px;
+}
+
+#forever-screen h2 {
+    font-size: 48px;
+    color: #ff5fa2;
+    margin-bottom: 10px;
+}
+
+/* FLOATING ITEMS */
+.float {
+    position: fixed;
+    bottom: -50px;
+    animation: floatUp 10s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(0); }
+    to { transform: translateY(-110vh); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- CAKE SCREEN -->
+<div class="screen" id="cake-screen" style="display:flex;">
+    <div id="cake">🎂</div>
+    <p>Click the cake 🕯️</p>
+</div>
+
+<!-- QUESTION SCREEN -->
+<div class="screen" id="question-screen">
+    <h1>Do you love Raya? 💗</h1>
+    <div>
+        <button class="btn" onclick="yesAnswer()">Yes</button>
+        <button class="btn" onclick="noAnswer()">No</button>
+    </div>
+</div>
+
+<!-- WRONG ANSWER SCREEN -->
+<div class="screen" id="wrong-screen">
+    <h1>Uh oh 😞</h1>
+    <p>Wrong answer dhuvie, choose again</p>
+    <div>
+        <button class="btn" onclick="yesAnswer()">Yes</button>
+        <button class="btn" onclick="yesAnswer()">Yes</button>
+    </div>
+</div>
+
+<!-- MESSAGE SCREEN -->
+<div class="screen" id="message-section">
+    <div class="photo-box">
+        <img src="IMG_20251012_195905_764.jpg" alt="Dhuvie">
+    </div>
+
+    <div class="message">
+First of all, Happy Happy Birthday dhuv
+As I'm trying to write for you, i don't know what to write exactly there is a lot to say to you a lot of things I want to say but there are not much words in any language that can help me describe my feelings. 
+1st September 2025 that's the first time i talked to you basically I replied to your story and from there onwards we became close. Close? Nah it's as if despite being almost 2 hours away from you I feel like i live under your skin. There's this pull in my chest, towards you dhruvie as if there's a thread that bonds my soul to you does it sound fictional ? Well then be it. 
+It feels unreal to be with you, to laugh with you on your silly dumb jokes, to get mad at your constant ragebaits, to shed tears when i see you being naraz at me. 
+I've given you 100 reasons but these are nothing. Just words it's the way I feel that cannot be explained through 100 lines only. It's the way I could see you holding me right now or I can think of you holding me again by the end of this year or next year or next and so on..
+It's the way I only want it to be you. I don't know who deserves what or what not. But for me, I only want it to be you Dhruv. I want to be the one to wake up next to you in the morning or the one you come back home to. Or the one who will help you wash your hair if you feel lazy or the one who will cook your favourite meal for you, or the one you run to when everything else feels heavy, when nothing gets you, raya surely will.
+I've nothing to gift you with money and I know you won't even take it and it wouldn't even be enough i don't think nothing will be enough cause I'll always feel like i can give you more.
+So I'll give you me, i want you to take me not as a gift haha but as a person who will be like your "hamdard". I want to feel everything you feel from happiness to the pain you suffer from. 
+Im so grateful to have you dhruvie, it feels as if holding onto my baby boy who just wants me to adore him gently.  
+Happiest birthday. All i pray is to be able to say this again and again till i die that's what forever is to me. 
+I give my forever to you, 
+P.S (thank you mummy for creating this big ah child and i promise I'll take care of himmmm muah)
+I love you dhruv, these 3 words are all that raya can say at the end. I burn for you.
+    </div>
+</div>
+
+<!-- FOREVER SCREEN -->
+<div class="screen" id="forever-screen">
+    <h2>Happy Birthday Love 💕</h2>
+    <h1>Happy 24th Ayu 🎉</h1>
+    <h2>Forever with you always ♾️</h2>
+</div>
+
+<script>
+const cakeScreen = document.getElementById("cake-screen");
+const questionScreen = document.getElementById("question-screen");
+const wrongScreen = document.getElementById("wrong-screen");
+const messageSection = document.getElementById("message-section");
+const foreverScreen = document.getElementById("forever-screen");
+
+document.getElementById("cake").onclick = () => {
+    cakeScreen.style.display = "none";
+    questionScreen.style.display = "flex";
+};
+
+function yesAnswer() {
+    questionScreen.style.display = "none";
+    wrongScreen.style.display = "none";
+    messageSection.style.display = "flex";
+}
+
+function noAnswer() {
+    questionScreen.style.display = "none";
+    wrongScreen.style.display = "flex";
+}
+
+/* SCROLL TO FOREVER */
+let shown = false;
+window.addEventListener("scroll", () => {
+    if (!shown && window.innerHeight + window.scrollY >= document.body.scrollHeight - 10) {
+        shown = true;
+        messageSection.style.display = "none";
+        foreverScreen.style.display = "flex";
+        foreverScreen.style.opacity = "1";
+        createFloating();
+    }
+});
+
+/* FLOATING HEARTS / BALLOONS / CAKES */
+function createFloating() {
+    const emojis = ["❤️","🤍","💗","🎈","🎂","💖"];
+    for (let i = 0; i < 40; i++) {
+        let span = document.createElement("span");
+        span.className = "float";
+        span.innerText = emojis[Math.floor(Math.random()*emojis.length)];
+        span.style.left = Math.random() * 100 + "vw";
+        span.style.fontSize = (20 + Math.random()*30) + "px";
+        span.style.animationDuration = (6 + Math.random()*6) + "s";
+        document.body.appendChild(span);
+    }
+}
+</script>
+
+</body>
+</html>
